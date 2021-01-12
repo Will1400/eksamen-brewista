@@ -1,7 +1,9 @@
 <template>
 	<ul class="flex flex-col gap-4">
 		<li v-for="brew in brews" :key="brew.id">
-			<brew-list-item :brew="brew"></brew-list-item>
+			<router-link :to="{ name: 'brewDetails', params: { id: brew.id } }">
+				<brew-list-item :brew="brew"></brew-list-item>
+			</router-link>
 		</li>
 	</ul>
 </template>
