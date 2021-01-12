@@ -4,10 +4,10 @@
 			<h2 class="font-bold uppercase">{{ coffee.title }}</h2>
 			<p class="text-gray-500 text-sm">{{ coffee.subtitle }}</p>
 		</div>
-		<div class="my-5">
+		<div class="my-5 text-gray-700">
 			{{ coffee.description }}
 		</div>
-		<div class="flex flex-wrap justify-between gap-y-4">
+		<div class="flex flex-wrap justify-between gap-y-4 text-sm">
 			<div class="w-2/4">
 				<h3 class="uppercase text-gray-500">process</h3>
 				<p class="">{{ coffee.process }}</p>

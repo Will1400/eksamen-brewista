@@ -16,6 +16,17 @@ export default {
 					Country: "Guatermala",
 					varieties: ["Castilo", "Caturra"],
 				},
+				{
+					id: "Beza123",
+					title: "Beza",
+					subtitle: "Impact Roaster",
+					description:
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat iusto officia voluptas distinctio asperiores ullam omnis rerum dolorum ipsa optio.",
+					process: "Sun Dried",
+					roastProfile: "Medium",
+					Country: "Ethiopia",
+					varieties: ["Castilo", "Caturra"],
+				},
 			],
 		};
 	},
