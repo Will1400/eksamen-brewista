@@ -8,7 +8,7 @@ export default {
 	components: { AuthForm },
 	methods: {
 		authenticated() {
-			this.$router.replace({ name: "brews" });
+			this.$router.replace({ name: "home" });
 		},
 	},
 };

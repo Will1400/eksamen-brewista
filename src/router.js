@@ -14,14 +14,17 @@ import BrewDetails from "./pages/brew/BrewDetails.vue";
 
 import NotFound from "./pages/NotFound.vue";
 
+import store from "./store";
+
 const router = createRouter({
 	history: createWebHistory(),
 	routes: [
-		{ path: "/", name: "home", redirect: "/brews" },
+		{ path: "/", name: "home", meta: { requiresUnAuth: true } },
 		{ path: "/auth", name: "auth", component: UserAuth },
 		{
 			path: "/brews",
 			component: BrewBase,
+			meta: { requiresAuth: true },
 			children: [
 				{ path: "", name: "brews", component: BrewsOverview },
 				{
@@ -75,6 +78,19 @@ const router = createRouter({
 			component: NotFound,
 		},
 	],
+});
+
+router.beforeEach(function (to, from, next) {
+	if (to.meta.requiresAuth && !store.getters["auth/isAuthenticated"]) {
+		next({ name: "auth" });
+	} else if (
+		to.meta.requiresUnAuth &&
+		store.getters["auth/isAuthenticated"]
+	) {
+		next({ name: "brews" });
+	} else {
+		next();
+	}
 });
 
 export default router;
