@@ -1,7 +1,7 @@
 <template>
 	<ul class="flex flex-col gap-4">
-		<li>
-			<brew-list-item></brew-list-item>
+		<li v-for="brew in brews" :key="brew.id">
+			<brew-list-item :brew="brew"></brew-list-item>
 		</li>
 	</ul>
 </template>
@@ -10,5 +10,10 @@
 import BrewListItem from "./BrewListItem.vue";
 export default {
 	components: { BrewListItem },
+	computed: {
+		brews() {
+			return this.$store.getters["brew/brews"];
+		},
+	},
 };
 </script>

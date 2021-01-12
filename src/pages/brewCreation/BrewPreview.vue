@@ -1,10 +1,17 @@
 <template>
 	<div class="flex items-start gap-4 mb-10 mt-4 h-full">
-		<button>🔙 Back</button>
+		<button class="flex items-center justify-center">
+			<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
+		</button>
 		<div>
 			<h1>{{ recipe.title }}</h1>
-			<recipe-small-details></recipe-small-details>
+			<recipe-small-details v-bind="recipe"></recipe-small-details>
 		</div>
+	</div>
+	<div>
+		<ul>
+			<li>step 1</li>
+		</ul>
 	</div>
 	<div>
 		<button @click="finishBrew">Finish</button>
@@ -42,5 +49,3 @@ export default {
 	},
 };
 </script>
-
-<style></style>

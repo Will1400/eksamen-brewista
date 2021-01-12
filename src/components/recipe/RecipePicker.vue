@@ -5,7 +5,6 @@
 				@click="recipeSelected(recipe.id)"
 				class="text-left hover:bg-gray-200 w-full"
 			>
-				{{ recipe.id }}
 				<recipe-list-item :recipe="recipe"></recipe-list-item>
 			</button>
 		</li>

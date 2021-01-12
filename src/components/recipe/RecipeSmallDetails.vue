@@ -1,16 +1,20 @@
 <template>
-	<div class="flex justify-between w-full text-gray-500 gap-4 text-sm">
-		<div>
-			<p>{{ beanAmount }}</p>
+	<div class="flex justify-between w-full text-gray-500 gap-3 text-sm">
+		<div class="flex items-center">
+			<base-icon classes="w-3 h-3" icon="bean"></base-icon>
+			<p class="ml-1">{{ beanAmount }}</p>
 		</div>
-		<div>
-			<p>{{ waterAmount }}</p>
+		<div class="flex items-center">
+			<base-icon classes="w-3 h-3" icon="water"></base-icon>
+			<p class="ml-1">{{ waterAmount }}</p>
 		</div>
-		<div>
-			<p>{{ grindSize }}</p>
+		<div class="flex items-center">
+			<base-icon classes="w-3 h-3" icon="grind"></base-icon>
+			<p class="ml-1">{{ grindSize }}</p>
 		</div>
-		<div>
-			<p>{{ time }}</p>
+		<div class="flex items-center">
+			<base-icon classes="w-3 h-3" icon="time"></base-icon>
+			<p class="ml-1">{{ time }}</p>
 		</div>
 	</div>
 </template>

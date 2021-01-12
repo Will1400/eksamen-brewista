@@ -1,14 +1,16 @@
 <template>
 	<div class="h-full">
-		<div class="flex justify-between">
+		<div class="flex justify-between pt-2">
 			<h1>Brewista</h1>
-			<p>Profile</p>
+			<div class="text-gray-500">
+				<base-icon classes="w-8 h-8" icon="user"></base-icon>
+			</div>
 		</div>
 		<div class="mt-6">
 			<h2 class="uppercase text-gray-500 text-sm mb-3">Latest brews</h2>
 			<brew-list></brew-list>
 		</div>
-		<div class="fixed bottom-6 left-0 w-full">
+		<div class="fixed bottom-3 left-0 w-full">
 			<div class="flex items-center justify-center">
 				<router-link
 					:to="{ name: 'brewCreate' }"
@@ -25,6 +27,11 @@
 import BrewList from "/src/components/brew/BrewList.vue";
 export default {
 	components: { BrewList },
+	computed: {
+		brews() {
+			return this.$store.getters["brew/brews"];
+		},
+	},
 };
 </script>
 
