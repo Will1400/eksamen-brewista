@@ -1,6 +1,6 @@
 <template>
 	<div class="flex gap-4 mb-10 mt-4">
-		<button class="flex items-center justify-center">
+		<button @click="back" class="flex items-center justify-center">
 			<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
 		</button>
 		<h1>How do you want to brew</h1>
@@ -17,6 +17,9 @@ export default {
 	components: { RecipePicker },
 	props: ["coffeeId"],
 	methods: {
+		back() {
+			this.$router.go(-1);
+		},
 		recipeSelected(id) {
 			console.log(id);
 			this.$router.push({
