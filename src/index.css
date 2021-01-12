@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.card {
+		@apply transition-all hover:bg-gray-100 hover:shadow-xl;
+	}
+}

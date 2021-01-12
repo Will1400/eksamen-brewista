@@ -1,9 +1,9 @@
 <template>
-	<ul class="flex flex-col gap-4">
+	<ul class="flex flex-col gap-6">
 		<li v-for="recipe in recipes" :key="recipe.id">
 			<button
 				@click="recipeSelected(recipe.id)"
-				class="text-left hover:bg-gray-200 w-full"
+				class="card text-left w-full"
 			>
 				<recipe-list-item :recipe="recipe"></recipe-list-item>
 			</button>

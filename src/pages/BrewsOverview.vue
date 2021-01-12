@@ -1,7 +1,7 @@
 <template>
 	<div class="h-full">
 		<div class="flex justify-between pt-2">
-			<h1>Brewista</h1>
+			<h1 class="text-gray-600 text-lg">Brewista</h1>
 			<div class="text-gray-500">
 				<base-icon classes="w-8 h-8" icon="user"></base-icon>
 			</div>
@@ -14,7 +14,7 @@
 			<div class="flex items-center justify-center">
 				<router-link
 					:to="{ name: 'brewCreate' }"
-					class="bg-yellow-200 rounded-full px-10 py-5 font-bold uppercase"
+					class="bg-yellow-200 transform-gpu transition-colors rounded-full px-10 py-5 font-bold uppercase focus:translate-y-1 hover:bg-yellow-400"
 				>
 					Brew a cup
 				</router-link>
