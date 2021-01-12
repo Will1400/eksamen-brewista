@@ -194,7 +194,7 @@
 
 		<!--   French press -->
 		<symbol
-			id="french"
+			id="frenchpress"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 38 53"
 			fill="currentColor"
@@ -236,7 +236,7 @@
 
 		<!--  Cold infusion  -->
 		<svg
-			id="infusion"
+			id="coldinfusion"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 39.228 65.533"
 			fill="currentColor"
@@ -306,7 +306,7 @@
 
 		<!-- Kalita Wave   -->
 		<symbol
-			id="kalita"
+			id="kalitawave"
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			viewBox="0 0 39 41"

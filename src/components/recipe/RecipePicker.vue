@@ -1,5 +1,5 @@
 <template>
-	<ul>
+	<ul class="flex flex-col gap-4">
 		<li v-for="recipe in recipes" :key="recipe.id">
 			<button
 				@click="recipeSelected(recipe.id)"
