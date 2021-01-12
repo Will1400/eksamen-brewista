@@ -1,10 +1,14 @@
+import getters from "./getters";
+
 export default {
+	namespaced: true,
 	state() {
 		return {
-			recipies: [
+			recipes: [
 				{
-					id: "Calahute321",
-					title: "Calahute alto",
+					id: "AeroPress321",
+					icon: "aeropress",
+					title: "AeroPress",
 					beanAmount: "16g",
 					waterAmount: "230ml",
 					type: "Medium",
@@ -13,4 +17,5 @@ export default {
 			],
 		};
 	},
+	getters,
 };
