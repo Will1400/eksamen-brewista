@@ -11,7 +11,7 @@ export default {
 					title: "AeroPress",
 					beanAmount: "16g",
 					waterAmount: "230ml",
-					type: "Medium",
+					grindSize: "Medium",
 					time: "1min",
 				},
 			],

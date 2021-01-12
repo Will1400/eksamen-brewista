@@ -1,6 +1,8 @@
 export default {
 	addBrew(context, payload) {
-		context.commit("addBrew", payload);
-		console.log(payload);
+		context.commit("addBrew", {
+			...payload,
+			id: payload.coffee.id + payload.recipe.id,
+		});
 	},
 };
