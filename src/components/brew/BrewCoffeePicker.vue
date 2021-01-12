@@ -1,5 +1,5 @@
 <template>
-	<ul>
+	<ul class="flex flex-col gap-4">
 		<li v-for="coffee in coffees" :key="coffee.id">
 			<button
 				@click="coffeeSelected(coffee.id)"
