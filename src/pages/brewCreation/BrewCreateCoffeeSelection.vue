@@ -6,16 +6,14 @@
 		<h1>Pick your coffee</h1>
 	</div>
 	<div>
-		<brew-coffee-picker
-			@coffee-selected="coffeeSelected"
-		></brew-coffee-picker>
+		<coffee-picker @coffee-selected="coffeeSelected"></coffee-picker>
 	</div>
 </template>
 
 <script>
-import BrewCoffeePicker from "../../components/brew/BrewCoffeePicker.vue";
+import CoffeePicker from "../../components/coffee/CoffeePicker.vue";
 export default {
-	components: { BrewCoffeePicker },
+	components: { CoffeePicker },
 	methods: {
 		back() {
 			this.$router.go(-1);
