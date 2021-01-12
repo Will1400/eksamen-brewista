@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import UserAuth from "./pages/auth/UserAuth.vue";
+
 import BrewBase from "./pages/brew/BrewBase.vue";
 import BrewsOverview from "./pages/brew/BrewsOverview.vue";
 import BrewCreate from "./pages/brew/BrewCreate.vue";
@@ -16,6 +18,7 @@ const router = createRouter({
 	history: createWebHistory(),
 	routes: [
 		{ path: "/", name: "home", redirect: "/brews" },
+		{ path: "/auth", name: "auth", component: UserAuth },
 		{
 			path: "/brews",
 			component: BrewBase,
