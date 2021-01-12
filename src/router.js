@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import BrewsOverview from "./pages/BrewsOverview.vue";
-import BrewCreate from "./pages/BrewCreate.vue";
-import BrewCreateCoffeeSelection from "./pages/brewCreation/BrewCreateCoffeeSelection.vue";
-import BrewCreateRecipeSelection from "./pages/brewCreation/BrewCreateRecipeSelection.vue";
-import BrewPreview from "./pages/brewCreation/BrewPreview.vue";
+import BrewsOverview from "./pages/brew/BrewsOverview.vue";
+import BrewCreate from "./pages/brew/BrewCreate.vue";
+import BrewCreateCoffeeSelection from "./pages/brew/creation/BrewCreateCoffeeSelection.vue";
+import BrewCreateRecipeSelection from "./pages/brew/creation/BrewCreateRecipeSelection.vue";
+import BrewPreview from "./pages/brew/creation/BrewPreview.vue";
+
+import NotFound from "./pages/NotFound.vue";
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -39,6 +41,11 @@ const router = createRouter({
 					props: true,
 				},
 			],
+		},
+		{
+			path: "/:notFound(.*)",
+			name: "notFound",
+			component: NotFound,
 		},
 	],
 });

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import RecipePicker from "../../components/recipe/RecipePicker.vue";
+import RecipePicker from "/src/components/recipe/RecipePicker.vue";
 export default {
 	components: { RecipePicker },
 	props: ["coffeeId"],

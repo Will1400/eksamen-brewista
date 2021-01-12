@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import RecipeSmallDetails from "../../components/recipe/RecipeSmallDetails.vue";
+import RecipeSmallDetails from "/src/components/recipe/RecipeSmallDetails.vue";
 export default {
 	components: { RecipeSmallDetails },
 	props: ["coffeeId", "recipeId"],

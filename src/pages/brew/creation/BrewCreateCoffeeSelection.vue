@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CoffeePicker from "../../components/coffee/CoffeePicker.vue";
+import CoffeePicker from "/src/components/coffee/CoffeePicker.vue";
 export default {
 	components: { CoffeePicker },
 	methods: {
