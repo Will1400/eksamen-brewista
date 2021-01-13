@@ -63,6 +63,7 @@ const router = createRouter({
 				{
 					path: "create",
 					component: BrewCreate,
+					meta: { noHeader: true },
 					children: [
 						{
 							path: "",

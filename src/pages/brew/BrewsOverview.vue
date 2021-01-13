@@ -1,13 +1,5 @@
 <template>
 	<div class="h-full">
-		<div class="flex justify-between pt-2">
-			<h1 class="text-gray-600 text-lg">Brewista</h1>
-			<div class="text-gray-500">
-				<router-link :to="{ name: 'profile' }">
-					<base-icon classes="w-8 h-8" icon="user"></base-icon>
-				</router-link>
-			</div>
-		</div>
 		<div class="mt-6">
 			<brew-list></brew-list>
 		</div>

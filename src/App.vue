@@ -1,6 +1,7 @@
 <template>
 	<div class="min-h-screen">
 		<div class="container md:max-w-7xl lg:pt-10 lg:mb-20 lg mx-auto p-4">
+			<the-header></the-header>
 			<router-view v-slot="isProps">
 				<transition name="route" mode="out-in">
 					<component :is="isProps.Component"></component>
@@ -11,7 +12,9 @@
 </template>
 
 <script>
+import TheHeader from "./components/layout/TheHeader.vue";
 export default {
+	components: { TheHeader },
 	mounted() {
 		this.$store.dispatch("auth/autoLogin");
 	},
