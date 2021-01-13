@@ -18,7 +18,7 @@ export default {
 	components: { CoffeePicker },
 	methods: {
 		back() {
-			this.$router.go(-1);
+			this.$router.push({ name: "brews" });
 		},
 		coffeeSelected(id) {
 			console.log(id);

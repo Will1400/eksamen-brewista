@@ -12,13 +12,17 @@
 			<h2 class="uppercase text-gray-500 text-sm mb-3">Latest brews</h2>
 			<brew-list></brew-list>
 		</div>
-		<div class="fixed bottom-3 left-0 w-full">
+		<div
+			class="fixed md:relative bottom-3 md:bottom-auto left-0 md:mt-4 w-full"
+		>
 			<div class="flex items-center justify-center">
 				<router-link
 					:to="{ name: 'brewCreate' }"
-					class="transform-gpu transition-all rounded-full px-10 py-5 font-bold uppercase focus:translate-y-1 bg-gradient-to-bl from-yellow-200 via-yellow-300 to-yellow-400 hover:scale-105"
+					class="transform-gpu transition-all rounded-full px-10 py-5 md:w-full bg-gradient-to-bl from-yellow-200 via-yellow-300 to-yellow-400 hover:-translate-y-1 md:rounded-lg hover:shadow-xl"
 				>
-					Brew a cup
+					<span class="text-center font-bold uppercase block w-full">
+						Brew a cup
+					</span>
 				</router-link>
 			</div>
 		</div>
