@@ -9,7 +9,6 @@
 			</div>
 		</div>
 		<div class="mt-6">
-			<h2 class="uppercase text-gray-500 text-sm mb-3">Latest brews</h2>
 			<brew-list></brew-list>
 		</div>
 		<div

@@ -1,6 +1,11 @@
 <template>
 	<div>
-		<brew-details v-if="brew" :brew="brew" @go-back="back"></brew-details>
+		<brew-details
+			v-if="brew"
+			:brew="brew"
+			@go-back="back"
+			isFavoritable
+		></brew-details>
 	</div>
 </template>
 
