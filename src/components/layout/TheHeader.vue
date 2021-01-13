@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-if="showHeader"
-		class="flex justify-between px-4 py-2 mb-4 shadow-sm"
+		class="flex justify-between px-4 py-2 mb-4 shadow-sm rounded-xl"
 	>
 		<h1 class="text-gray-600 text-lg">Brewista</h1>
 		<div class="text-gray-500">
