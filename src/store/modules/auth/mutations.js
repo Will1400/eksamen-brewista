@@ -3,4 +3,7 @@ export default {
 		state.userId = payload.userId;
 		state.token = payload.token;
 	},
+	setAutoLogout(state) {
+		state.didAutoLogout = true;
+	},
 };
