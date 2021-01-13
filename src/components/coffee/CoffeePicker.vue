@@ -1,7 +1,10 @@
 <template>
 	<ul class="flex flex-col gap-6">
 		<li v-for="coffee in coffees" :key="coffee.id">
-			<button @click="coffeeSelected(coffee.id)" class="card text-left">
+			<button
+				@click="coffeeSelected(coffee.id)"
+				class="card text-left w-full"
+			>
 				<coffee-list-item :coffee="coffee"></coffee-list-item>
 			</button>
 		</li>

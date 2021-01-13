@@ -32,6 +32,9 @@ export default {
 			return this.$store.getters["brew/brews"];
 		},
 	},
+	mounted() {
+		this.$store.dispatch("brew/loadBrews");
+	},
 };
 </script>
 
