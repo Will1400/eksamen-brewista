@@ -17,6 +17,7 @@
 						type="email"
 						id="email"
 						v-model.trim="email"
+						ref="emailInput"
 					/>
 				</div>
 				<div>
@@ -96,6 +97,9 @@ export default {
 		switchModeButtonCaption() {
 			return this.mode === "login" ? "Sinup instead" : "Login instead";
 		},
+	},
+	mounted() {
+		this.$refs.emailInput.focus();
 	},
 };
 </script>
