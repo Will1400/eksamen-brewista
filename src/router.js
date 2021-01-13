@@ -15,8 +15,6 @@ import BrewPreview from "./pages/brew/creation/BrewPreview.vue";
 import BrewSpecific from "./pages/brew/BrewSpecific.vue";
 import BrewDetails from "./pages/brew/BrewDetails.vue";
 
-import NotFound from "./pages/NotFound.vue";
-
 import store from "./store";
 
 const router = createRouter({
@@ -89,7 +87,7 @@ const router = createRouter({
 		{
 			path: "/:notFound(.*)",
 			name: "notFound",
-			component: NotFound,
+			redirect: { name: "home" },
 		},
 	],
 });
