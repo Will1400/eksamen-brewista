@@ -1,7 +1,7 @@
 <template>
 	<div
 		v-if="showHeader"
-		class="flex justify-between px-4 py-2 mb-4 shadow-sm rounded-xl"
+		class="flex justify-between px-4 py-2 mb-4 shadow-sm sm:rounded-xl"
 	>
 		<router-link :to="{ name: 'home' }" class="focus:outline-none">
 			<h1 class="text-gray-600 text-lg">Brewista</h1>
