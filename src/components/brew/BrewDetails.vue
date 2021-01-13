@@ -1,7 +1,9 @@
 <template>
 	<div class="md:shadow-xl md:p-10 md:flex md:flex-col">
-		<div class="flex justify-between items-start gap-4 mb-10 mt-4 h-full">
-			<button @click="back" class="flex items-center justify-center">
+		<div
+			class="flex justify-between items-start gap-4 sm:mb-10 mt-4 h-full"
+		>
+			<button @click="back" class="flex items-center justify-start w-28">
 				<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
 			</button>
 			<div class="flex">
@@ -18,7 +20,25 @@
 					></recipe-small-details>
 				</div>
 			</div>
-			<div class="w-10">
+			<div class="w-28 flex gap-4 items-center flex-col sm:flex-row">
+				<div v-if="isEditable">
+					<button
+						@click="edit"
+						class="flex group sm:gap-2 sm:border-b-2 px-2 py-2 border-transparent transition-all hover:border-yellow-400"
+					>
+						<span class="hidden sm:inline">Edit</span>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="w-5 transition-all group-hover:text-yellow-400"
+						>
+							<path
+								d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+							/>
+						</svg>
+					</button>
+				</div>
 				<div v-if="isFavoritable">
 					<button @click="toggleFavorite">
 						<div>
@@ -53,7 +73,7 @@
 				</li>
 			</ul>
 		</div>
-		<slot name="actions"> </slot>
+		<slot name="actions"></slot>
 	</div>
 </template>
 
@@ -65,10 +85,17 @@ export default {
 	props: {
 		brew: Object,
 		isFavoritable: Boolean,
+		isEditable: Boolean,
 	},
 	methods: {
 		back() {
 			this.$emit("go-back");
+		},
+		edit() {
+			this.$router.push({
+				name: "brewEdit",
+				params: { id: this.brew.id },
+			});
 		},
 		toggleFavorite() {
 			const brew = this.brew;

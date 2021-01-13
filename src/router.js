@@ -12,8 +12,9 @@ import BrewCreateCoffeeSelection from "./pages/brew/creation/BrewCreateCoffeeSel
 import BrewCreateRecipeSelection from "./pages/brew/creation/BrewCreateRecipeSelection.vue";
 import BrewPreview from "./pages/brew/creation/BrewPreview.vue";
 
-import BrewSpecific from "./pages/brew/BrewSpecific.vue";
-import BrewDetails from "./pages/brew/BrewDetailsPage.vue";
+import BrewSpecific from "./pages/brew/specific/BrewSpecific.vue";
+import BrewDetails from "./pages/brew/specific/BrewDetailsPage.vue";
+import BrewEdit from "./pages/brew/specific/BrewEdit.vue";
 
 import store from "./store";
 
@@ -49,6 +50,12 @@ const router = createRouter({
 							path: "",
 							name: "brewDetails",
 							component: BrewDetails,
+							props: true,
+						},
+						{
+							path: "edit",
+							name: "brewEdit",
+							component: BrewEdit,
 							props: true,
 						},
 					],

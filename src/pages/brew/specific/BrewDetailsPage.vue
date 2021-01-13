@@ -5,19 +5,20 @@
 			:brew="brew"
 			@go-back="back"
 			isFavoritable
+			isEditable
 		></brew-details>
 	</div>
 </template>
 
 <script>
-import BrewDetails from "../../components/brew/BrewDetails.vue";
+import BrewDetails from "/src/components/brew/BrewDetails.vue";
 import RecipeSmallDetails from "/src/components/recipe/RecipeSmallDetails.vue";
 export default {
 	components: { RecipeSmallDetails, BrewDetails },
 	props: ["id"],
 	methods: {
 		back() {
-			this.$router.go(-1);
+			this.$router.push({ name: "brews" });
 		},
 	},
 	computed: {
