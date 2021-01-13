@@ -1,5 +1,5 @@
 <template>
-	<div class="p-0 m-0">
+	<div class="p-0 m-0 md:shadow-xl md:p-10">
 		<div class="flex gap-4 mb-10 mt-4 items-center justify-between">
 			<button @click="back" class="flex items-center justify-center">
 				<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
@@ -8,7 +8,6 @@
 			<div class="w-6"></div>
 		</div>
 		<div class="flex justify-center">
-			<div></div>
 			<button
 				@click="logout"
 				class="px-4 py-2 mt-96 flex gap-2 items-center rounded-md transition-all border-2 border-red-500 hover:shadow-xl hover:bg-red-500 hover:text-gray-100"

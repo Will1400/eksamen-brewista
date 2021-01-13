@@ -14,7 +14,7 @@
 				<h3 class="text-gray-500">Brewista it's time to brew</h3>
 			</div>
 			<div class="w-full flex flex-col justify-center items-center mt-20">
-				<p>Login to manage your brews</p>
+				<p class="mb-2 text-gray-600">Login to manage your brews</p>
 				<button
 					@click="goToAuth"
 					class="bg-gradient-to-bl from-green-200 to-green-500 w-full md:w-2/5 text-gray-100 px-8 py-4 rounded-lg"

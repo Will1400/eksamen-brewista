@@ -1,5 +1,7 @@
 <template>
-	<auth-form @auth-completed="authenticated"></auth-form>
+	<div class="md:shadow-xl md:p-10 md:rounded-md xl:mt-16">
+		<auth-form @auth-completed="authenticated"></auth-form>
+	</div>
 </template>
 
 <script>

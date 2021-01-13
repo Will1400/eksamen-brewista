@@ -34,7 +34,7 @@
 				</div>
 				<button
 					@click.prevent="submitData"
-					class="mt-5 bg-yellow-400 rounded-xl p-4"
+					class="mt-5 transition-all transform-gpu bg-gradient-to-b from-green-300 to-green-500 text-gray-100 rounded-xl p-4 hover:shadow-xl hover:scale-101"
 				>
 					{{ submitButtonCaption }}
 				</button>
