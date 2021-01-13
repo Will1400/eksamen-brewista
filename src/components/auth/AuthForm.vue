@@ -39,7 +39,10 @@
 				>
 					{{ submitButtonCaption }}
 				</button>
-				<button class="text-sm" @click.prevent="switchMode">
+				<button
+					class="text-sm py-2 focus:outline-none"
+					@click.prevent="switchMode"
+				>
 					{{ switchModeButtonCaption }}
 				</button>
 			</form>
@@ -92,10 +95,10 @@ export default {
 	},
 	computed: {
 		submitButtonCaption() {
-			return this.mode === "login" ? "Login" : "Sinup";
+			return this.mode === "login" ? "Login" : "Signup";
 		},
 		switchModeButtonCaption() {
-			return this.mode === "login" ? "Sinup instead" : "Login instead";
+			return this.mode === "login" ? "Signup instead" : "Login instead";
 		},
 	},
 	mounted() {
