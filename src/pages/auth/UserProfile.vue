@@ -7,14 +7,14 @@
 			<h1 class="text-xl">Profile</h1>
 			<div class="w-6"></div>
 		</div>
-		<div class="mt-56">
-			<div class="w-2/6 mx-auto">
+		<div class="mt-5">
+			<div class="sm:w-2/6 mx-auto">
 				<profile-details></profile-details>
 			</div>
 			<div class="flex justify-center">
 				<button
 					@click="logout"
-					class="px-4 py-2 mt-10 flex gap-2 items-center rounded-md transition-all border-2 border-red-500 hover:shadow-xl hover:bg-red-500 hover:text-gray-100"
+					class="px-4 py-2 w-full sm:w-auto mt-10 flex gap-2 items-center justify-center rounded-md transition-all border-2 border-red-500 hover:shadow-xl hover:bg-red-500 hover:text-gray-100"
 				>
 					<span> Sign out </span>
 					<svg
