@@ -1,5 +1,5 @@
 <template>
-	<div class="border-solid border flex py-4">
+	<div class="card border-solid border flex py-4">
 		<div class="flex items-center justify-center">
 			<base-icon classes="w-20 h-20" :icon="brew.recipe.icon"></base-icon>
 		</div>

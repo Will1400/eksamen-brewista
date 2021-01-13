@@ -1,10 +1,12 @@
 <template>
-	<div class="container mx-auto p-4 min-h-screen">
-		<router-view v-slot="isProps">
-			<transition name="route" mode="out-in">
-				<component :is="isProps.Component"></component>
-			</transition>
-		</router-view>
+	<div class="min-h-screen">
+		<div class="container md:max-w-7xl lg:pt-10 lg mx-auto p-4">
+			<router-view v-slot="isProps">
+				<transition name="route" mode="out-in">
+					<component :is="isProps.Component"></component>
+				</transition>
+			</router-view>
+		</div>
 	</div>
 </template>
 

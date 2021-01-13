@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<div class="flex items-start gap-4 mb-10 mt-4 h-full">
+	<div class="md:shadow-xl md:p-10">
+		<div class="flex items-start justify-between gap-4 mb-10 mt-4 h-full">
 			<button @click="back" class="flex items-center justify-center">
 				<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
 			</button>
@@ -8,6 +8,7 @@
 				<h1 class="text-lg">{{ recipe.title }}</h1>
 				<recipe-small-details v-bind="recipe"></recipe-small-details>
 			</div>
+			<div class="w-6"></div>
 		</div>
 		<div>
 			<ul class="flex flex-col gap-6">
