@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import UserAuth from "./pages/auth/UserAuth.vue";
+import UserProfile from "./pages/auth/UserProfile.vue";
+
+import HomePage from "./pages/HomePage.vue";
 
 import BrewBase from "./pages/brew/BrewBase.vue";
 import BrewsOverview from "./pages/brew/BrewsOverview.vue";
@@ -19,8 +22,19 @@ import store from "./store";
 const router = createRouter({
 	history: createWebHistory(),
 	routes: [
-		{ path: "/", name: "home", meta: { requiresUnAuth: true } },
+		{
+			path: "/",
+			name: "home",
+			meta: { requiresUnAuth: true },
+			component: HomePage,
+		},
 		{ path: "/auth", name: "auth", component: UserAuth },
+		{
+			path: "/profile",
+			name: "profile",
+			component: UserProfile,
+			meta: { requiresAuth: true },
+		},
 		{
 			path: "/brews",
 			component: BrewBase,
