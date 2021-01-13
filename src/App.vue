@@ -29,10 +29,10 @@ export default {
 }
 
 .route-enter-active {
-	transition: 0.3s ease-out;
+	transition: 0.2s ease-out;
 }
 .route-leave-active {
-	transition: 0.3s ease-in;
+	transition: 0.2s ease-in;
 }
 
 .route-enter-to,
