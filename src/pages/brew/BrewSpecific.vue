@@ -1,9 +1,11 @@
 <template>
-	<router-view v-slot="isProps">
-		<transition name="route" mode="out-in">
-			<component :is="isProps.Component"></component>
-		</transition>
-	</router-view>
+	<div>
+		<router-view v-slot="isProps">
+			<transition name="route" mode="out-in">
+				<component :is="isProps.Component"></component>
+			</transition>
+		</router-view>
+	</div>
 </template>
 
 <script>
