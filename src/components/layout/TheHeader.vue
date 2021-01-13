@@ -3,7 +3,9 @@
 		v-if="showHeader"
 		class="flex justify-between px-4 py-2 mb-4 shadow-sm rounded-xl"
 	>
-		<h1 class="text-gray-600 text-lg">Brewista</h1>
+		<router-link :to="{ name: 'home' }" class="focus:outline-none">
+			<h1 class="text-gray-600 text-lg">Brewista</h1>
+		</router-link>
 		<div class="text-gray-500">
 			<router-link :to="{ name: 'profile' }">
 				<base-icon classes="w-8 h-8" icon="user"></base-icon>
