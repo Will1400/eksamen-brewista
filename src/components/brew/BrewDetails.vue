@@ -1,9 +1,9 @@
 <template>
 	<div class="md:shadow-xl md:p-10 md:flex md:flex-col">
 		<div
-			class="flex justify-between items-start gap-4 sm:mb-10 mt-4 h-full"
+			class="flex justify-between items-start sm:gap-2 sm:mb-10 mt-4 h-full"
 		>
-			<button @click="back" class="flex items-center justify-start w-28">
+			<button @click="back" class="flex items-center justify-start">
 				<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
 			</button>
 			<div class="flex">
