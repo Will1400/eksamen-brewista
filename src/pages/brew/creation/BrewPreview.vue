@@ -1,38 +1,26 @@
 <template>
-	<div class="md:shadow-xl md:p-10">
-		<div class="flex items-start justify-between gap-4 mb-10 mt-4 h-full">
-			<button @click="back" class="flex items-center justify-center">
-				<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
-			</button>
-			<div>
-				<h1 class="text-lg">{{ recipe.title }}</h1>
-				<recipe-small-details v-bind="recipe"></recipe-small-details>
-			</div>
-			<div class="w-6"></div>
-		</div>
-		<div>
-			<ul class="flex flex-col gap-6">
-				<li v-for="(step, index) in recipe.steps" :key="index">
-					<p class="uppercase text-sm text-gray-500">
-						Step {{ index + 1 }}
-					</p>
-					<p class="text-gray-600">{{ step }}</p>
-				</li>
-			</ul>
-		</div>
-		<div class="flex justify-end mt-10">
-			<button @click="finishBrew" class="flex items-center gap-3">
-				<span class="uppercase font-bold">Finish</span>
-				<base-icon classes="w-5 h-5" icon="arrowForward"></base-icon>
-			</button>
-		</div>
+	<div class="">
+		<brew-details v-if="brew" :brew="brew" @go-back="back">
+			<template v-slot:actions>
+				<div class="flex justify-end mt-10">
+					<button @click="finishBrew" class="flex items-center gap-3">
+						<span class="uppercase font-bold">Finish</span>
+						<base-icon
+							classes="w-5 h-5"
+							icon="arrowForward"
+						></base-icon>
+					</button>
+				</div>
+			</template>
+		</brew-details>
 	</div>
 </template>
 
 <script>
+import BrewDetails from "/src/components/brew/BrewDetails.vue";
 import RecipeSmallDetails from "/src/components/recipe/RecipeSmallDetails.vue";
 export default {
-	components: { RecipeSmallDetails },
+	components: { RecipeSmallDetails, BrewDetails },
 	props: ["coffeeId", "recipeId"],
 	methods: {
 		back() {
@@ -48,6 +36,12 @@ export default {
 		},
 	},
 	computed: {
+		brew() {
+			return {
+				recipe: this.recipe,
+				coffee: this.coffee,
+			};
+		},
 		recipe() {
 			const recipes = this.$store.getters["recipe/recipes"];
 

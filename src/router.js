@@ -13,7 +13,7 @@ import BrewCreateRecipeSelection from "./pages/brew/creation/BrewCreateRecipeSel
 import BrewPreview from "./pages/brew/creation/BrewPreview.vue";
 
 import BrewSpecific from "./pages/brew/BrewSpecific.vue";
-import BrewDetails from "./pages/brew/BrewDetails.vue";
+import BrewDetails from "./pages/brew/BrewDetailsPage.vue";
 
 import store from "./store";
 
