@@ -1,13 +1,15 @@
 <template>
-	<div class="flex gap-4 mb-10 mt-4">
-		<button @click="back" class="flex items-center justify-center">
-			<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
-		</button>
-		<h1>How do you want to brew</h1>
-	</div>
 	<div>
-		<p class="text-gray-500 text-sm">Choose a recipe</p>
-		<recipe-picker @recipe-selected="recipeSelected"></recipe-picker>
+		<div class="flex gap-4 mb-10 mt-4">
+			<button @click="back" class="flex items-center justify-center">
+				<base-icon classes="w-6 h-6" icon="arrowBack"></base-icon>
+			</button>
+			<h1>How do you want to brew</h1>
+		</div>
+		<div>
+			<p class="text-gray-500 text-sm">Choose a recipe</p>
+			<recipe-picker @recipe-selected="recipeSelected"></recipe-picker>
+		</div>
 	</div>
 </template>
 
