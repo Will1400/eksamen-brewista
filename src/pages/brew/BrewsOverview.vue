@@ -32,11 +32,6 @@
 import BrewList from "/src/components/brew/BrewList.vue";
 export default {
 	components: { BrewList },
-	computed: {
-		brews() {
-			return this.$store.getters["brew/brews"];
-		},
-	},
 	mounted() {
 		this.$store.dispatch("brew/loadBrews");
 	},

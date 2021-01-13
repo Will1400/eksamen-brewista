@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<div>
+		<div v-if="!favoriteBrews.length && !brews.length">
+			<p>You have no brews saved</p>
+		</div>
+		<div v-if="favoriteBrews.length">
 			<h2 class="uppercase text-gray-500 text-sm mb-3">Favorites</h2>
 			<ul class="flex flex-col gap-4">
 				<li v-for="brew in favoriteBrews" :key="brew.id">
@@ -12,7 +15,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="mt-10">
+		<div class="mt-10" v-if="brews.length">
 			<h2 class="uppercase text-gray-500 text-sm mb-3">Your brews</h2>
 			<ul class="flex flex-col gap-4">
 				<li v-for="brew in brews" :key="brew.id">
